@@ -8,17 +8,17 @@
 
 Project Organization
 ------------
-│   .gitignore
-│   context.py
-│   employees.json
-│   main.py
-│   
-├───models
-│   │   employee.py
-│   │   __init__.py
-│           
-├───services
-    │   employees_service.py
+    │   .gitignore
+    │   context.py
+    │   employees.json
+    │   main.py
+    │   
+    ├───models
+    │   │   employee.py
+    │   │   __init__.py
+    │           
+    ├───services
+        │   employees_service.py
 ------------
 
 ## Demo
