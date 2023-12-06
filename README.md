@@ -6,7 +6,7 @@
 2. Install [Pretty Table](https://pypi.org/project/prettytable/) `pip install prettytable`.
 3. Run `main.py`.
 
-## Project Organization
+Project Organization
 ------------
 │   .gitignore
 │   context.py
