@@ -6,7 +6,14 @@ class Employees_service:
 
     def __init__(self) -> None:
         # Create context
-        self.__context = Context('./employees.json')
+        try:
+            self.__context = Context('./employees.json')
+        # File not found exceptions
+        except FileNotFoundError:
+            raise FileNotFoundError(f"The file '{self._path}' does not exist.")
+        # Other exceptions
+        except Exception as e:
+            raise Exception(e)
 
         # Read data
         self.__employees = [Employee(**data)

@@ -220,7 +220,17 @@ def sum_salary_table(employees_manager):
 
 
 if __name__ == '__main__':
-    employees_manager = Employees_service()
+    try:
+        employees_manager = Employees_service()
+    # File not found exceptions
+    except FileNotFoundError as fe:
+        print(fe)
+        exit(0)
+    # Other exceptions
+    except Exception as e:
+        print(e)
+        exit(0)
+
     while True:
         print('================ Menu ================')
         print('1. Tổng số nhân viên')
@@ -250,6 +260,6 @@ if __name__ == '__main__':
             case '7':
                 sum_salary_table(employees_manager)
             case '0':
-                print("something")
+                break
 
         input()
